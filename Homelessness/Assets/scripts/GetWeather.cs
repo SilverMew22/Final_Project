@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 public class GetWeather : MonoBehaviour
 {
-    string key = "PUTYOURKEYHERE";
+    string key = "49fd35a8da2650013f629c4d0fce42f8";
     void Start()
     {
         StartCoroutine(AskForWeather());
