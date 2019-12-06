@@ -8,6 +8,7 @@ public class GetWeather : MonoBehaviour
     void Start()
     {
         StartCoroutine(AskForWeather());
+
     }
     IEnumerator AskForWeather()
     {
@@ -18,6 +19,7 @@ public class GetWeather : MonoBehaviour
         {
             // Get text content like this:
             Debug.Log(www.downloadHandler.text);
+            
         }
         else
         {
@@ -25,3 +27,4 @@ public class GetWeather : MonoBehaviour
         }
     }
 }
+//http://api.openweathermap.org/data/2.5/weather?zip=11238&mode=xml&APPID=49fd35a8da2650013f629c4d0fce42f8
