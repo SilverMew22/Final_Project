@@ -5,6 +5,8 @@ using UnityEngine.Networking;
 public class GetWeather : MonoBehaviour
 {
     string key = "49fd35a8da2650013f629c4d0fce42f8";
+    public string theData;
+
     void Start()
     {
         StartCoroutine(AskForWeather());
@@ -18,6 +20,7 @@ public class GetWeather : MonoBehaviour
         if (!www.isNetworkError && !www.isHttpError)
         {
             // Get text content like this:
+            theData = www.downloadHandler.text;
             Debug.Log(www.downloadHandler.text);
             
         }
