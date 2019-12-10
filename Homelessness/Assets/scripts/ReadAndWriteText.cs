@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;public class ReadAndWriteText : MonoBehaviour
 {
-    Text myText; string myString = ""; void Start()
+    Text myText;
+    string myString = "";
+
+    void Start()
     {
         myText = GetComponent<Text>();
         myText.text = myString;
