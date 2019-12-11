@@ -16,17 +16,17 @@ public class GetWeather : MonoBehaviour
 
     public static int Length { get; internal set; }
 
+    public static int IndexOf { get; internal set; }
+
 
     void Start()
     {  
     StartCoroutine(AskForWeather());
-        
-
     }
 
     internal static string Substring(int v1, int v2)
     {
-        throw new NotImplementedException();
+    throw new NotImplementedException();
     }
 
     
@@ -91,5 +91,6 @@ public class GetWeather : MonoBehaviour
 }
 //http://api.openweathermap.org/data/2.5/weather?zip=11238&mode=xml&APPID=49fd35a8da2650013f629c4d0fce42f8
 //equation to convert kelvin to c
-//C = K - 273.15
+//(0K − 273.15) × 9/5 + 32 =
+//https://docs.unity3d.com/ScriptReference/String.Length.html
 //<temperature value="285.65" min="283.71" max="287.59" unit="kelvin"></temperature>
