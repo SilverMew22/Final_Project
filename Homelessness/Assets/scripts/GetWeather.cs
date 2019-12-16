@@ -88,6 +88,18 @@ public class GetWeather : MonoBehaviour
     {
         throw new NotImplementedException();
     }
+    void ReadTemp()
+    {
+        if (theData.Length < 8)
+        {
+            Debug.Log("Password not long enough!");
+        }
+        //Check if the length of the string is more than or equal to 8
+        if (theData.Length >= 8)
+        {
+            Debug.Log("Password Accepted!");
+        }
+    }
 }
 //http://api.openweathermap.org/data/2.5/weather?zip=11238&mode=xml&APPID=49fd35a8da2650013f629c4d0fce42f8
 //equation to convert kelvin to c
