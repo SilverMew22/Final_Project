@@ -12,7 +12,10 @@ public class GetWeather : MonoBehaviour
     //public bool Contains(string theData, startIndex);
     int startIndex = 0;
     public GameObject rain;
-    public GameObject snow;    
+    public GameObject snow;
+    public GameObject rain_text;
+    public GameObject snow_text;
+    public GameObject clear_text;
 
     public static int Length { get; internal set; }
 
@@ -37,22 +40,30 @@ public class GetWeather : MonoBehaviour
         {
             Debug.Log("rain");
             rain.SetActive(true);
-            snow.SetActive(false);            
+            snow.SetActive(false);
+            rain_text.SetActive(true);
+            snow_text.SetActive(false);
+            clear_text.SetActive(false);
         }
         else
         {
             Debug.Log("no rain");
+            clear_text.SetActive(true);
         }
         //check for snow
         if (theData.Contains("snow"))
         {
             Debug.Log("snow");
             snow.SetActive(true);
-            rain.SetActive(false);            
+            rain.SetActive(false);
+            rain_text.SetActive(true);
+            snow_text.SetActive(false);
+           clear_text.SetActive(false);
         }
         else
         {
             Debug.Log("no snow");
+            clear_text.SetActive(true);
         }
 
         //check for temperature
